@@ -1,28 +1,33 @@
-import type {RangeValue, DateValue} from "../src";
-
 import React from "react";
 import {Meta} from "@storybook/react";
 import {calendar} from "@nextui-org/theme";
 import {
   today,
+  parseDate,
   getLocalTimeZone,
   isWeekend,
-  CalendarDate,
-  startOfMonth,
   startOfWeek,
-  endOfMonth,
-  endOfWeek,
+  startOfMonth,
+  getDayOfWeek,
 } from "@internationalized/date";
 import {I18nProvider, useLocale} from "@react-aria/i18n";
 import {Button, ButtonGroup} from "@nextui-org/button";
 import {Radio, RadioGroup} from "@nextui-org/radio";
 import {cn} from "@nextui-org/theme";
+import {NextUIProvider} from "@nextui-org/system";
 
-import {RangeCalendar, RangeCalendarProps} from "../src";
+import {
+  Calendar,
+  CalendarProps,
+  DateValue,
+  CalendarCellContent,
+  CalendarCellHeader,
+  CalendarCellBody,
+} from "../src";
 
 export default {
-  title: "Components/RangeCalendar",
-  component: RangeCalendar,
+  title: "Components/Calendar",
+  component: Calendar,
   parameters: {
     layout: "centered",
   },
@@ -42,38 +47,38 @@ export default {
       },
       options: ["narrow", "short", "long"],
     },
+    disableAnimation: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
-} as Meta<typeof RangeCalendar>;
+} as Meta<typeof Calendar>;
 
 const defaultProps = {
   ...calendar.defaultVariants,
   visibleMonths: 1,
 };
 
-const Template = (args: RangeCalendarProps) => <RangeCalendar {...args} />;
+const Template = (args: CalendarProps) => <Calendar {...args} />;
 
-const ControlledTemplate = (args: RangeCalendarProps) => {
-  const defaultValue = {
-    start: today(getLocalTimeZone()),
-    end: today(getLocalTimeZone()).add({weeks: 1}),
-  };
-
-  let [value, setValue] = React.useState<RangeValue<DateValue> | null>(defaultValue);
+const ControlledTemplate = (args: CalendarProps) => {
+  let [value, setValue] = React.useState<DateValue>(parseDate("2024-03-07"));
 
   return (
     <div className="flex flex-wrap gap-4">
       <div className="flex flex-col items-center gap-4">
         <p className="text-small text-default-600">Date (uncontrolled)</p>
-        <RangeCalendar
-          aria-label="Date range (uncontrolled)"
-          defaultValue={defaultValue}
+        <Calendar
+          aria-label="Date (uncontrolled)"
+          defaultValue={parseDate("2024-03-07")}
           {...args}
         />
       </div>
       <div className="flex flex-col items-center gap-4">
         <p className="text-small text-default-600">Date (controlled)</p>
-        <RangeCalendar
-          aria-label="Date range (controlled)"
+        <Calendar
+          aria-label="Date (controlled)"
           value={value}
           onChange={setValue}
           {...args}
@@ -84,7 +89,7 @@ const ControlledTemplate = (args: RangeCalendarProps) => {
   );
 };
 
-const UnavailableDatesTemplate = (args: RangeCalendarProps) => {
+const UnavailableDatesTemplate = (args: CalendarProps) => {
   let now = today(getLocalTimeZone());
 
   let disabledRanges = [
@@ -93,41 +98,36 @@ const UnavailableDatesTemplate = (args: RangeCalendarProps) => {
     [now.add({days: 23}), now.add({days: 24})],
   ];
 
+  let {locale} = useLocale();
+
   let isDateUnavailable = (date) =>
+    isWeekend(date, locale) ||
     disabledRanges.some(
       (interval) => date.compare(interval[0]) >= 0 && date.compare(interval[1]) <= 0,
     );
 
   return (
-    <RangeCalendar
-      aria-label="Stay dates"
+    <Calendar
+      aria-label="Appointment date"
       isDateUnavailable={isDateUnavailable}
-      minValue={now}
+      minValue={today(getLocalTimeZone())}
       {...args}
     />
   );
 };
 
-const NonContiguousRangesTemplate = (args: RangeCalendarProps) => {
-  let {locale} = useLocale();
-
-  return (
-    <RangeCalendar
-      allowsNonContiguousRanges
-      aria-label="Time off request"
-      isDateUnavailable={(date) => isWeekend(date, locale)}
-      {...args}
-    />
-  );
-};
-
-const ControlledFocusedValueTemplate = (args: RangeCalendarProps) => {
-  let defaultDate = new CalendarDate(2024, 3, 1);
-  let [focusedDate, setFocusedDate] = React.useState(defaultDate);
+const ControlledFocusedValueTemplate = (args: CalendarProps) => {
+  let defaultDate = today(getLocalTimeZone());
+  let [focusedDate, setFocusedDate] = React.useState<DateValue>(defaultDate);
 
   return (
     <div className="flex flex-col gap-4">
-      <RangeCalendar focusedValue={focusedDate} onFocusChange={setFocusedDate} {...args} />
+      <Calendar
+        focusedValue={focusedDate}
+        value={defaultDate}
+        onFocusChange={setFocusedDate}
+        {...args}
+      />
       <Button
         className="max-w-fit"
         color="primary"
@@ -140,20 +140,16 @@ const ControlledFocusedValueTemplate = (args: RangeCalendarProps) => {
   );
 };
 
-const InvalidDatesTemplate = (args: RangeCalendarProps) => {
-  let [date, setDate] = React.useState<RangeValue<DateValue>>({
-    start: today(getLocalTimeZone()),
-    end: today(getLocalTimeZone()).add({weeks: 1}),
-  });
-
+const InvalidDateTemplate = (args: CalendarProps) => {
+  let [date, setDate] = React.useState<DateValue>(today(getLocalTimeZone()));
   let {locale} = useLocale();
-  let isInvalid = isWeekend(date.start, locale) || isWeekend(date.end, locale);
+  let isInvalid = isWeekend(date, locale);
 
   return (
-    <RangeCalendar
+    <Calendar
       {...args}
-      aria-label="Stay dates"
-      errorMessage={isInvalid ? "Stay dates cannot fall on weekends" : undefined}
+      aria-label="Appointment date"
+      errorMessage={isInvalid ? "We are closed on weekends" : undefined}
       isInvalid={isInvalid}
       value={date}
       onChange={setDate}
@@ -161,35 +157,24 @@ const InvalidDatesTemplate = (args: RangeCalendarProps) => {
   );
 };
 
-const InternationalCalendarsTemplate = (args: RangeCalendarProps) => {
+const InternationalCalendarsTemplate = (args: CalendarProps) => {
   return (
     <div className="flex flex-col gap-4">
       <I18nProvider locale="zh-CN-u-ca-chinese">
-        <RangeCalendar aria-label="Appointment date" {...args} />
+        <Calendar aria-label="Appointment date" {...args} />
       </I18nProvider>
     </div>
   );
 };
 
-const PresetsTemplate = (args: RangeCalendarProps) => {
-  let [value, setValue] = React.useState<RangeValue<DateValue>>({
-    start: today(getLocalTimeZone()),
-    end: today(getLocalTimeZone()).add({weeks: 1, days: 3}),
-  });
-
-  let [focusedValue, setFocusedValue] = React.useState<DateValue>(today(getLocalTimeZone()));
-
+const PresetsTemplate = (args: CalendarProps) => {
+  let defaultDate = today(getLocalTimeZone());
+  let [value, setValue] = React.useState<DateValue>(defaultDate);
   let {locale} = useLocale();
 
   let now = today(getLocalTimeZone());
-  let nextMonth = now.add({months: 1});
-
-  let nextWeek = {
-    start: startOfWeek(now.add({weeks: 1}), locale),
-    end: endOfWeek(now.add({weeks: 1}), locale),
-  };
-  let thisMonth = {start: startOfMonth(now), end: endOfMonth(now)};
-  let nextMonthValue = {start: startOfMonth(nextMonth), end: endOfMonth(nextMonth)};
+  let nextWeek = startOfWeek(now.add({weeks: 1}), locale);
+  let nextMonth = startOfMonth(now.add({months: 1}));
 
   const CustomRadio = (props) => {
     const {children, ...otherProps} = props;
@@ -215,13 +200,13 @@ const PresetsTemplate = (args: RangeCalendarProps) => {
 
   return (
     <div className="flex flex-col gap-4">
-      <RangeCalendar
+      <Calendar
         bottomContent={
           <RadioGroup
             aria-label="Date precision"
             classNames={{
               base: "w-full pb-2",
-              wrapper: "-my-2.5 py-2.5 px-3 gap-1 flex-nowrap max-w-[280px] overflow-x-scroll",
+              wrapper: "-my-2.5 py-2.5 px-3 gap-1 flex-nowrap max-w-[280px] overflow-scroll",
             }}
             defaultValue="exact_dates"
             orientation="horizontal"
@@ -237,7 +222,7 @@ const PresetsTemplate = (args: RangeCalendarProps) => {
         classNames={{
           content: "w-full",
         }}
-        focusedValue={focusedValue}
+        focusedValue={value}
         nextButtonProps={{
           variant: "bordered",
         }}
@@ -247,41 +232,131 @@ const PresetsTemplate = (args: RangeCalendarProps) => {
         topContent={
           <ButtonGroup
             fullWidth
-            className="px-3 max-w-full pb-2 pt-3 bg-content1 [&>button]:text-default-500 [&>button]:border-default-200/60"
+            className="px-3 pb-2 pt-3 bg-content1 [&>button]:text-default-500 [&>button]:border-default-200/60"
             radius="full"
             size="sm"
             variant="bordered"
           >
-            <Button
-              onPress={() => {
-                setValue(nextWeek);
-                setFocusedValue(nextWeek.end);
-              }}
-            >
-              Next week
-            </Button>
-            <Button
-              onPress={() => {
-                setValue(thisMonth);
-                setFocusedValue(thisMonth.start);
-              }}
-            >
-              This month
-            </Button>
-            <Button
-              onPress={() => {
-                setValue(nextMonthValue), setFocusedValue(nextMonthValue.start);
-              }}
-            >
-              Next month
-            </Button>
+            <Button onPress={() => setValue(now)}>Today</Button>
+            <Button onPress={() => setValue(nextWeek)}>Next week</Button>
+            <Button onPress={() => setValue(nextMonth)}>Next month</Button>
           </ButtonGroup>
         }
         value={value}
         onChange={setValue}
-        onFocusChange={setFocusedValue}
+        onFocusChange={setValue}
         {...args}
       />
+    </div>
+  );
+};
+
+const CalendarWidthTemplate = (args: CalendarProps) => {
+  return (
+    <div className="flex gap-4">
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-small text-default-600">calendarWidth: 300</p>
+        <Calendar {...args} calendarWidth={300} />
+      </div>
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-small text-default-600">calendarWidth: 300px</p>
+        <Calendar {...args} calendarWidth="300px" />
+      </div>
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-small text-default-600">calendarWidth: 30em</p>
+        <Calendar {...args} calendarWidth="30em" />
+      </div>
+    </div>
+  );
+};
+
+const CustomCellTemplate = (args: CalendarProps) => {
+  const {locale} = useLocale();
+
+  return (
+    <div className="flex gap-4">
+      <div className="flex flex-col items-center gap-4">
+        <Calendar {...args} calendarWidth={340}>
+          {(date) => (
+            <CalendarCellContent>
+              <CalendarCellHeader />
+              <CalendarCellBody>
+                <div className="flex flex-col w-full text-tiny gap-0.5 px-0.5">
+                  {date.day % 7 === 0 && (
+                    <span
+                      aria-label="Birthday event"
+                      className="bg-red-500/20 w-full rounded-md px-1 text-red-400 line-clamp-1"
+                      role="status"
+                    >
+                      Birth day
+                    </span>
+                  )}
+                  {date.day % 5 === 0 && (
+                    <span
+                      aria-label="Birthday event"
+                      className="bg-green-500/20 w-full rounded-md px-1 text-green-400 line-clamp-1"
+                      role="status"
+                    >
+                      MTG
+                    </span>
+                  )}
+                  {date.day % 3 === 0 && (
+                    <span
+                      aria-label="Birthday event"
+                      className="bg-yellow-500/20 w-full rounded-md px-1 text-yellow-400 line-clamp-1"
+                      role="status"
+                    >
+                      MTG
+                    </span>
+                  )}
+                </div>
+              </CalendarCellBody>
+            </CalendarCellContent>
+          )}
+        </Calendar>
+      </div>
+      <div className="flex flex-col items-center gap-4">
+        <Calendar {...args}>
+          {(date) => {
+            const dayOfWeek = getDayOfWeek(date, locale);
+            const style =
+              dayOfWeek === 0 ? "text-red-500" : dayOfWeek === 6 ? "text-blue-500" : "inherit";
+
+            return (
+              <CalendarCellContent>
+                <CalendarCellHeader>
+                  <span className={style}>{date.day}</span>
+                </CalendarCellHeader>
+              </CalendarCellContent>
+            );
+          }}
+        </Calendar>
+      </div>
+    </div>
+  );
+};
+
+const ReducedMotionTemplate = (args: CalendarProps) => {
+  return (
+    <div className="flex gap-4">
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-small text-default-600">reducedMotion: never</p>
+        <NextUIProvider reducedMotion="never">
+          <Calendar {...args} />
+        </NextUIProvider>
+      </div>
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-small text-default-600">reducedMotion: always</p>
+        <NextUIProvider reducedMotion="always">
+          <Calendar {...args} />
+        </NextUIProvider>
+      </div>
+      <div className="flex flex-col items-center gap-4">
+        <p className="text-small text-default-600">reducedMotion: user</p>
+        <NextUIProvider reducedMotion="user">
+          <Calendar {...args} />
+        </NextUIProvider>
+      </div>
     </div>
   );
 };
@@ -305,10 +380,7 @@ export const ReadOnly = {
   render: Template,
   args: {
     ...defaultProps,
-    value: {
-      start: today(getLocalTimeZone()),
-      end: today(getLocalTimeZone()).add({weeks: 1}),
-    },
+    value: today(getLocalTimeZone()),
     isReadOnly: true,
   },
 };
@@ -324,10 +396,7 @@ export const MinDateValue = {
   render: Template,
   args: {
     ...defaultProps,
-    defaultValue: {
-      start: today(getLocalTimeZone()),
-      end: today(getLocalTimeZone()).add({weeks: 1}),
-    },
+    defaultValue: today(getLocalTimeZone()),
     minValue: today(getLocalTimeZone()),
   },
 };
@@ -336,10 +405,7 @@ export const MaxDateValue = {
   render: Template,
   args: {
     ...defaultProps,
-    defaultValue: {
-      start: today(getLocalTimeZone()).subtract({weeks: 1}),
-      end: today(getLocalTimeZone()),
-    },
+    defaultValue: today(getLocalTimeZone()),
     maxValue: today(getLocalTimeZone()),
   },
 };
@@ -348,17 +414,8 @@ export const UnavailableDates = {
   render: UnavailableDatesTemplate,
   args: {
     ...defaultProps,
-    defaultValue: {
-      start: today(getLocalTimeZone()),
-      end: today(getLocalTimeZone()).add({weeks: 1}),
-    },
-  },
-};
-
-export const NonContiguousRanges = {
-  render: NonContiguousRangesTemplate,
-  args: {
-    ...defaultProps,
+    defaultValue: today(getLocalTimeZone()),
+    unavailableDates: [today(getLocalTimeZone())],
   },
 };
 
@@ -369,8 +426,8 @@ export const ControlledFocusedValue = {
   },
 };
 
-export const InvalidDates = {
-  render: InvalidDatesTemplate,
+export const InvalidDate = {
+  render: InvalidDateTemplate,
   args: {
     ...defaultProps,
   },
@@ -388,6 +445,7 @@ export const InternationalCalendars = {
   render: InternationalCalendarsTemplate,
   args: {
     ...defaultProps,
+    showMonthAndYearPickers: true,
   },
 };
 
@@ -410,6 +468,27 @@ export const PageBehavior = {
 
 export const Presets = {
   render: PresetsTemplate,
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const CalendarWidth = {
+  render: CalendarWidthTemplate,
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const CustomCellContent = {
+  render: CustomCellTemplate,
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const ReducedMotion = {
+  render: ReducedMotionTemplate,
   args: {
     ...defaultProps,
   },
