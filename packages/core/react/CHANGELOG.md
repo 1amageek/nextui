@@ -1,5 +1,13 @@
 # @nextui-org/react
 
+## 2.6.4
+
+### Patch Changes
+
+- Updated dependencies [[`0218de1`](https://github.com/nextui-org/nextui/commit/0218de16f0831a7fee14065352b3284aa52c39c3)]:
+  - @nextui-org/calendar@2.3.0
+  - @nextui-org/date-picker@2.3.3
+
 ## 2.6.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nextui-org/calendar
 
+## 2.3.0
+
+### Minor Changes
+
+- [`0218de1`](https://github.com/nextui-org/nextui/commit/0218de16f0831a7fee14065352b3284aa52c39c3) Thanks [@1amageek](https://github.com/1amageek)! - Added the `renderCellContent` prop to the `Calendar` and `RangeCalendar` components, allowing developers to specify custom content for each calendar cell. Updated the existing tests and added new test cases to cover the custom cell content functionality.
+
 ## 2.2.2
 
 ### Patch Changes
