@@ -1,5 +1,27 @@
 # @nextui-org/pagination
 
+## 2.2.6
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+## 2.2.5
+
+### Patch Changes
+
+- [#4286](https://github.com/nextui-org/nextui/pull/4286) [`11eae5c`](https://github.com/nextui-org/nextui/commit/11eae5cc808e10db07b509f4e06d30441bb1937a) Thanks [@macci001](https://github.com/macci001)! - Reverts the PR-4168 (#4256, #4246, #4244)
+
+## 2.2.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/use-intersection-observer@2.2.2
+  - @nextui-org/use-pagination@2.2.2
+
 ## 2.2.3
 
 ### Patch Changes

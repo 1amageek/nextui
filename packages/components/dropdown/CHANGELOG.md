@@ -1,5 +1,49 @@
 # @nextui-org/dropdown
 
+## 2.3.7
+
+### Patch Changes
+
+- [#4322](https://github.com/nextui-org/nextui/pull/4322) [`78c0928`](https://github.com/nextui-org/nextui/commit/78c09280e30113bd648057ad64ad6198d1e5d58f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix #4292 interactive elements were not responding to "onClick" event
+
+- Updated dependencies [[`78c0928`](https://github.com/nextui-org/nextui/commit/78c09280e30113bd648057ad64ad6198d1e5d58f)]:
+  - @nextui-org/aria-utils@2.2.5
+  - @nextui-org/menu@2.2.7
+  - @nextui-org/popover@2.3.7
+
+## 2.3.6
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+- Updated dependencies [[`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f)]:
+  - @nextui-org/menu@2.2.6
+  - @nextui-org/popover@2.3.6
+
+## 2.3.5
+
+### Patch Changes
+
+- [#4288](https://github.com/nextui-org/nextui/pull/4288) [`aa5ea19`](https://github.com/nextui-org/nextui/commit/aa5ea19a3c990f8f6d47abacf321f0cbce67b927) Thanks [@ryo-manba](https://github.com/ryo-manba)! - Fix initial animation direction to match fallback placement (#4251)
+
+- Updated dependencies [[`11eae5c`](https://github.com/nextui-org/nextui/commit/11eae5cc808e10db07b509f4e06d30441bb1937a)]:
+  - @nextui-org/menu@2.2.5
+  - @nextui-org/popover@2.3.5
+
+## 2.3.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- [#4278](https://github.com/nextui-org/nextui/pull/4278) [`26b33a5`](https://github.com/nextui-org/nextui/commit/26b33a51f0ae9d0bb1146277a8b61b839aa52393) Thanks [@wingkwong](https://github.com/wingkwong)! - fix unnecessary ref in dropdown (#4245)
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/aria-utils@2.2.4
+  - @nextui-org/popover@2.3.4
+  - @nextui-org/menu@2.2.4
+
 ## 2.3.3
 
 ### Patch Changes

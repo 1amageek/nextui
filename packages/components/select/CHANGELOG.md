@@ -1,5 +1,54 @@
 # @nextui-org/select
 
+## 2.4.7
+
+### Patch Changes
+
+- Updated dependencies [[`78c0928`](https://github.com/nextui-org/nextui/commit/78c09280e30113bd648057ad64ad6198d1e5d58f)]:
+  - @nextui-org/use-aria-button@2.2.3
+  - @nextui-org/aria-utils@2.2.5
+  - @nextui-org/listbox@2.3.7
+  - @nextui-org/popover@2.3.7
+  - @nextui-org/form@2.1.6
+
+## 2.4.6
+
+### Patch Changes
+
+- Updated dependencies [[`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f)]:
+  - @nextui-org/listbox@2.3.6
+  - @nextui-org/form@2.1.6
+  - @nextui-org/popover@2.3.6
+  - @nextui-org/scroll-shadow@2.3.3
+  - @nextui-org/spinner@2.2.4
+
+## 2.4.5
+
+### Patch Changes
+
+- Updated dependencies [[`11eae5c`](https://github.com/nextui-org/nextui/commit/11eae5cc808e10db07b509f4e06d30441bb1937a)]:
+  - @nextui-org/listbox@2.3.5
+  - @nextui-org/form@2.1.5
+  - @nextui-org/popover@2.3.5
+  - @nextui-org/scroll-shadow@2.3.3
+  - @nextui-org/spinner@2.2.4
+
+## 2.4.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`b16291b`](https://github.com/nextui-org/nextui/commit/b16291b2200229f0d0a9ea910e38f3f100f7931f), [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/form@2.1.4
+  - @nextui-org/use-aria-multiselect@2.4.2
+  - @nextui-org/use-aria-button@2.2.2
+  - @nextui-org/aria-utils@2.2.4
+  - @nextui-org/listbox@2.3.4
+  - @nextui-org/popover@2.3.4
+  - @nextui-org/spinner@2.2.4
+  - @nextui-org/scroll-shadow@2.3.3
+
 ## 2.4.3
 
 ### Patch Changes

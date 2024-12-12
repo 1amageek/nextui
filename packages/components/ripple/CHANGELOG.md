@@ -1,5 +1,17 @@
 # @nextui-org/ripple
 
+## 2.2.5
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+## 2.2.4
+
+### Patch Changes
+
+- [#4284](https://github.com/nextui-org/nextui/pull/4284) [`dfefdd6`](https://github.com/nextui-org/nextui/commit/dfefdd6250eb81ae653e611a8dff12b2ae29a09c) Thanks [@sudongyuer](https://github.com/sudongyuer)! - Refactor Button & Card Ripple
+
 ## 2.2.3
 
 ### Patch Changes

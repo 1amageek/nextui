@@ -1,5 +1,32 @@
 # @nextui-org/checkbox
 
+## 2.3.6
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+- Updated dependencies []:
+  - @nextui-org/form@2.1.6
+
+## 2.3.5
+
+### Patch Changes
+
+- [#4311](https://github.com/nextui-org/nextui/pull/4311) [`03abf1d`](https://github.com/nextui-org/nextui/commit/03abf1daf4fe5ee74f4766cd4fd78068ac25ed78) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix #4252 #4260 interactive elements were not working properly
+
+- Updated dependencies []:
+  - @nextui-org/form@2.1.5
+
+## 2.3.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`b16291b`](https://github.com/nextui-org/nextui/commit/b16291b2200229f0d0a9ea910e38f3f100f7931f), [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/form@2.1.4
+
 ## 2.3.3
 
 ### Patch Changes

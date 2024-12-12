@@ -1,8 +1,8 @@
 import type {MenuItemBaseProps} from "./base/menu-item-base";
 import type {MenuItemVariantProps} from "@nextui-org/theme";
-import type {Node} from "@react-types/shared";
+import type {Node, PressEvent} from "@react-types/shared";
 
-import {useMemo, useRef, useCallback, Fragment} from "react";
+import {useMemo, useRef, useCallback} from "react";
 import {menuItem} from "@nextui-org/theme";
 import {
   HTMLNextUIProps,
@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/system";
 import {useFocusRing} from "@react-aria/focus";
 import {TreeState} from "@react-stately/tree";
-import {clsx, dataAttr, objectToDeps, removeEvents} from "@nextui-org/shared-utils";
+import {clsx, dataAttr, objectToDeps, removeEvents, warn} from "@nextui-org/shared-utils";
 import {useMenuItem as useAriaMenuItem} from "@react-aria/menu";
 import {isFocusVisible as AriaIsFocusVisible, useHover} from "@react-aria/interactions";
 import {mergeProps} from "@react-aria/utils";
@@ -59,7 +59,7 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
     isReadOnly = false,
     closeOnSelect,
     onClose,
-    href,
+    onClick: deprecatedOnClick,
     ...otherProps
   } = props;
 
@@ -68,11 +68,8 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
 
   const domRef = useRef<HTMLLIElement>(null);
 
-  const Component = as || "li";
+  const Component = as || (otherProps?.href ? "a" : "li");
   const shouldFilterDOMProps = typeof Component === "string";
-
-  const FragmentWrapper = href ? "a" : Fragment;
-  const fragmentWrapperProps = href ? {href} : {};
 
   const {rendered, key} = item;
 
@@ -84,6 +81,21 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
   const {isFocusVisible, focusProps} = useFocusRing({
     autoFocus,
   });
+
+  if (deprecatedOnClick && typeof deprecatedOnClick === "function") {
+    warn(
+      "onClick is deprecated, please use onPress instead. See: https://github.com/nextui-org/nextui/issues/4292",
+      "MenuItem",
+    );
+  }
+
+  const handlePress = useCallback(
+    (e: PressEvent) => {
+      deprecatedOnClick?.(e as unknown as React.MouseEvent<HTMLLIElement | HTMLAnchorElement>);
+      onPress?.(e);
+    },
+    [deprecatedOnClick, onPress],
+  );
 
   const {
     isPressed,
@@ -99,7 +111,7 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
       key,
       onClose,
       isDisabled: isDisabledProp,
-      onPress,
+      onPress: handlePress,
       onPressStart,
       onPressUp,
       onPressEnd,
@@ -198,7 +210,6 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
 
   return {
     Component,
-    FragmentWrapper,
     domRef,
     slots,
     classNames,
@@ -212,7 +223,6 @@ export function useMenuItem<T extends object>(originalProps: UseMenuItemProps<T>
     endContent,
     selectedIcon,
     disableAnimation,
-    fragmentWrapperProps,
     getItemProps,
     getLabelProps,
     hideSelectedIcon,
