@@ -1,5 +1,12 @@
 # @nextui-org/react
 
+## 2.6.11
+
+### Patch Changes
+
+- Updated dependencies [[`07780a7`](https://github.com/nextui-org/nextui/commit/07780a75a2747405e16af99c1692aef496f54175)]:
+  - @nextui-org/drawer@2.2.7
+
 ## 2.6.10
 
 ### Patch Changes
@@ -304,7 +311,6 @@
   - @nextui-org/kbd@2.2.3
   - @nextui-org/system@2.4.3
   - @nextui-org/framer-utils@2.1.3
-
 
 ## 2.6.3
 
