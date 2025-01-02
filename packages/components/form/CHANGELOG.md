@@ -1,5 +1,49 @@
 # @nextui-org/form
 
+## 2.1.7
+
+### Patch Changes
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31), [`afe0b52`](https://github.com/nextui-org/nextui/commit/afe0b527ce2dcd1f511b601fcba700fd2d12fcd6), [`e15ef62`](https://github.com/nextui-org/nextui/commit/e15ef62b6ccabc5aef2790c6f97d7457f204be92), [`e546124`](https://github.com/nextui-org/nextui/commit/e546124e1de49e8bd4d8f5e33cba87a0e83435ef)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/theme@2.4.4
+  - @nextui-org/react-utils@2.1.2
+  - @nextui-org/system@2.4.5
+
+## 2.1.6
+
+### Patch Changes
+
+- Updated dependencies [[`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f)]:
+  - @nextui-org/theme@2.4.3
+
+## 2.1.5
+
+### Patch Changes
+
+- Updated dependencies [[`03abf1d`](https://github.com/nextui-org/nextui/commit/03abf1daf4fe5ee74f4766cd4fd78068ac25ed78)]:
+  - @nextui-org/theme@2.4.2
+
+## 2.1.4
+
+### Patch Changes
+
+- [#4279](https://github.com/nextui-org/nextui/pull/4279) [`b16291b`](https://github.com/nextui-org/nextui/commit/b16291b2200229f0d0a9ea910e38f3f100f7931f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Add ref support to Form component
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3), [`455556e`](https://github.com/nextui-org/nextui/commit/455556e14278dd933b4acd1a136ea29879b49545)]:
+  - @nextui-org/system@2.4.4
+
+## 2.1.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
+- Updated dependencies []:
+  - @nextui-org/system@2.4.3
+
 ## 2.1.2
 
 ### Patch Changes

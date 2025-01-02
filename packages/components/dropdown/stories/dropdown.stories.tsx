@@ -99,6 +99,11 @@ export default {
         disable: true,
       },
     },
+    shouldBlockScroll: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
   decorators: [
     (Story) => (
@@ -137,13 +142,20 @@ const items = [
   },
 ];
 
-const Template = ({color, variant, ...args}: DropdownProps & DropdownMenuProps) => (
+const Template = ({
+  color,
+  variant,
+  label = "Trigger",
+  ...args
+}: DropdownProps & DropdownMenuProps & {label: string}) => (
   <Dropdown {...args}>
     <DropdownTrigger>
-      <Button>Trigger</Button>
+      <Button>{label}</Button>
     </DropdownTrigger>
     <DropdownMenu aria-label="Actions" color={color} variant={variant}>
-      <DropdownItem key="new">New file</DropdownItem>
+      <DropdownItem key="new" onPress={() => alert("New file")}>
+        New file
+      </DropdownItem>
       <DropdownItem key="copy">Copy link</DropdownItem>
       <DropdownItem key="edit">Edit file</DropdownItem>
       <DropdownItem key="delete" className="text-danger" color="danger">
@@ -777,6 +789,47 @@ export const DisableAnimation = {
 
 export const ItemCloseOnSelect = {
   render: ItemCloseOnSelectTemplate,
+
+  args: {
+    ...defaultProps,
+  },
+};
+
+export const WithFallbackPlacements = {
+  args: {
+    ...defaultProps,
+  },
+  render: (args) => (
+    <div className="relative h-screen w-screen">
+      <div className="absolute top-0 left-0 p-8 flex gap-4">
+        <Template {...args} label="placement: top" placement="top" />
+        <Template {...args} label="placement: bottom" placement="bottom" />
+      </div>
+      <div className="absolute bottom-0 left-0 p-8 flex gap-4">
+        <Template {...args} label="placement: bottom" placement="bottom" />
+        <Template {...args} label="placement: top" placement="top" />
+      </div>
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 p-8 flex flex-col gap-4">
+        <Template {...args} label="placement: left" placement="left" />
+        <Template {...args} label="placement: right" placement="right" />
+      </div>
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 p-8 flex flex-col gap-4">
+        <Template {...args} label="placement: right" placement="right" />
+        <Template {...args} label="placement: left" placement="left" />
+      </div>
+    </div>
+  ),
+};
+
+export const WithShouldBlockScroll = {
+  render: (args) => {
+    return (
+      <div className="flex gap-8">
+        <Template {...args} label="shouldBlockScroll: false" shouldBlockScroll={false} />
+        <Template {...args} label="shouldBlockScroll: true" shouldBlockScroll={true} />
+      </div>
+    );
+  },
 
   args: {
     ...defaultProps,

@@ -1,5 +1,42 @@
 # @nextui-org/pagination
 
+## 2.2.7
+
+### Patch Changes
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/use-pagination@2.2.3
+  - @nextui-org/react-utils@2.1.2
+
+## 2.2.6
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+## 2.2.5
+
+### Patch Changes
+
+- [#4286](https://github.com/nextui-org/nextui/pull/4286) [`11eae5c`](https://github.com/nextui-org/nextui/commit/11eae5cc808e10db07b509f4e06d30441bb1937a) Thanks [@macci001](https://github.com/macci001)! - Reverts the PR-4168 (#4256, #4246, #4244)
+
+## 2.2.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/use-intersection-observer@2.2.2
+  - @nextui-org/use-pagination@2.2.2
+
+## 2.2.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
 ## 2.2.2
 
 ### Patch Changes

@@ -1,5 +1,59 @@
 # @nextui-org/alert
 
+## 2.2.8
+
+### Patch Changes
+
+- [#4383](https://github.com/nextui-org/nextui/pull/4383) [`e15ef62`](https://github.com/nextui-org/nextui/commit/e15ef62b6ccabc5aef2790c6f97d7457f204be92) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix #4382 `hideIconWrapper` property wasn't removing the borded on `Alert` component
+
+- [#4365](https://github.com/nextui-org/nextui/pull/4365) [`5946e90`](https://github.com/nextui-org/nextui/commit/5946e90335c713e361e09927ab459445d707d7e4) Thanks [@wingkwong](https://github.com/wingkwong)! - fix alert slots & variantProps import (#4336)
+
+- [#4354](https://github.com/nextui-org/nextui/pull/4354) [`fa38828`](https://github.com/nextui-org/nextui/commit/fa388283458602cd8e128486323472498a145fa2) Thanks [@wingkwong](https://github.com/wingkwong)! - replace decrepate onClick in Alert
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/button@2.2.8
+  - @nextui-org/react-utils@2.1.2
+
+## 2.2.7
+
+### Patch Changes
+
+- Updated dependencies [[`78c0928`](https://github.com/nextui-org/nextui/commit/78c09280e30113bd648057ad64ad6198d1e5d58f)]:
+  - @nextui-org/button@2.2.7
+
+## 2.2.6
+
+### Patch Changes
+
+- Updated dependencies [[`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f)]:
+  - @nextui-org/button@2.2.6
+
+## 2.2.5
+
+### Patch Changes
+
+- Updated dependencies [[`dfefdd6`](https://github.com/nextui-org/nextui/commit/dfefdd6250eb81ae653e611a8dff12b2ae29a09c)]:
+  - @nextui-org/button@2.2.5
+
+## 2.2.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/button@2.2.4
+
+## 2.2.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
+- Updated dependencies [[`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050)]:
+  - @nextui-org/button@2.2.3
+
 ## 2.2.2
 
 ### Patch Changes

@@ -1,5 +1,31 @@
 # @nextui-org/system
 
+## 2.4.5
+
+### Patch Changes
+
+- Updated dependencies [[`76a72a9`](https://github.com/nextui-org/nextui/commit/76a72a9d1c8400d23b3f948670cb6844d9728b2a)]:
+  - @nextui-org/system-rsc@2.3.5
+  - @nextui-org/react-utils@2.1.2
+
+## 2.4.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- [#4264](https://github.com/nextui-org/nextui/pull/4264) [`455556e`](https://github.com/nextui-org/nextui/commit/455556e14278dd933b4acd1a136ea29879b49545) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix, mising react-types package added to the system package
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/system-rsc@2.3.4
+
+## 2.4.3
+
+### Patch Changes
+
+- Updated dependencies [[`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050)]:
+  - @nextui-org/system-rsc@2.3.3
+
 ## 2.4.2
 
 ### Patch Changes

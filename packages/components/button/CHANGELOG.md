@@ -1,5 +1,66 @@
 # @nextui-org/button
 
+## 2.2.8
+
+### Patch Changes
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/ripple@2.2.6
+  - @nextui-org/spinner@2.2.5
+  - @nextui-org/use-aria-button@2.2.4
+  - @nextui-org/react-utils@2.1.2
+
+## 2.2.7
+
+### Patch Changes
+
+- [#4322](https://github.com/nextui-org/nextui/pull/4322) [`78c0928`](https://github.com/nextui-org/nextui/commit/78c09280e30113bd648057ad64ad6198d1e5d58f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix #4292 interactive elements were not responding to "onClick" event
+
+- Updated dependencies [[`78c0928`](https://github.com/nextui-org/nextui/commit/78c09280e30113bd648057ad64ad6198d1e5d58f)]:
+  - @nextui-org/use-aria-button@2.2.3
+
+## 2.2.6
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+- Updated dependencies [[`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f)]:
+  - @nextui-org/ripple@2.2.5
+  - @nextui-org/spinner@2.2.4
+
+## 2.2.5
+
+### Patch Changes
+
+- [#4284](https://github.com/nextui-org/nextui/pull/4284) [`dfefdd6`](https://github.com/nextui-org/nextui/commit/dfefdd6250eb81ae653e611a8dff12b2ae29a09c) Thanks [@sudongyuer](https://github.com/sudongyuer)! - Refactor Button & Card Ripple
+
+- Updated dependencies [[`dfefdd6`](https://github.com/nextui-org/nextui/commit/dfefdd6250eb81ae653e611a8dff12b2ae29a09c)]:
+  - @nextui-org/ripple@2.2.4
+  - @nextui-org/spinner@2.2.4
+
+## 2.2.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/use-aria-button@2.2.2
+  - @nextui-org/spinner@2.2.4
+  - @nextui-org/ripple@2.2.3
+
+## 2.2.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
+- Updated dependencies [[`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050)]:
+  - @nextui-org/spinner@2.2.3
+  - @nextui-org/ripple@2.2.3
+
 ## 2.2.2
 
 ### Patch Changes

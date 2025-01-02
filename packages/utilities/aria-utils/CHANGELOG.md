@@ -1,5 +1,35 @@
 # @nextui-org/aria-utils
 
+## 2.2.6
+
+### Patch Changes
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/system@2.4.5
+
+## 2.2.5
+
+### Patch Changes
+
+- [#4322](https://github.com/nextui-org/nextui/pull/4322) [`78c0928`](https://github.com/nextui-org/nextui/commit/78c09280e30113bd648057ad64ad6198d1e5d58f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix #4292 interactive elements were not responding to "onClick" event
+
+## 2.2.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3), [`455556e`](https://github.com/nextui-org/nextui/commit/455556e14278dd933b4acd1a136ea29879b49545)]:
+  - @nextui-org/system@2.4.4
+
+## 2.2.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nextui-org/system@2.4.3
+
 ## 2.2.2
 
 ### Patch Changes

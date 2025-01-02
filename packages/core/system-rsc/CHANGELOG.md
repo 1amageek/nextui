@@ -1,5 +1,23 @@
 # @nextui-org/system-rsc
 
+## 2.3.5
+
+### Patch Changes
+
+- [#4291](https://github.com/nextui-org/nextui/pull/4291) [`76a72a9`](https://github.com/nextui-org/nextui/commit/76a72a9d1c8400d23b3f948670cb6844d9728b2a) Thanks [@shlyamster](https://github.com/shlyamster)! - Fix data type returned by the extendVariants function (#4269)
+
+## 2.3.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+## 2.3.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
 ## 2.3.2
 
 ### Patch Changes

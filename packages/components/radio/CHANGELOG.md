@@ -1,5 +1,52 @@
 # @nextui-org/radio
 
+## 2.3.7
+
+### Patch Changes
+
+- [#4334](https://github.com/nextui-org/nextui/pull/4334) [`0b117e5`](https://github.com/nextui-org/nextui/commit/0b117e59b22a485d95054491b5aea4e67d257bff) Thanks [@wingkwong](https://github.com/wingkwong)! - bump `@nextui-org/theme` in peerDependencies
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/form@2.1.7
+  - @nextui-org/react-utils@2.1.2
+
+## 2.3.6
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+- Updated dependencies []:
+  - @nextui-org/form@2.1.6
+
+## 2.3.5
+
+### Patch Changes
+
+- [#4311](https://github.com/nextui-org/nextui/pull/4311) [`03abf1d`](https://github.com/nextui-org/nextui/commit/03abf1daf4fe5ee74f4766cd4fd78068ac25ed78) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix #4252 #4260 interactive elements were not working properly
+
+- Updated dependencies []:
+  - @nextui-org/form@2.1.5
+
+## 2.3.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`b16291b`](https://github.com/nextui-org/nextui/commit/b16291b2200229f0d0a9ea910e38f3f100f7931f), [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/form@2.1.4
+
+## 2.3.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
+- Updated dependencies [[`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050)]:
+  - @nextui-org/form@2.1.3
+
 ## 2.3.2
 
 ### Patch Changes

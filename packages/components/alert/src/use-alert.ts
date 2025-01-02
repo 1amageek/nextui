@@ -1,9 +1,8 @@
 import type {ButtonProps} from "@nextui-org/button";
+import type {AlertSlots, AlertVariantProps, SlotsToClasses} from "@nextui-org/theme";
 
 import {HTMLNextUIProps, mapPropsVariants, PropGetter} from "@nextui-org/system";
-import {AlertSlots, SlotsToClasses} from "@nextui-org/theme";
 import {filterDOMProps, ReactRef, useDOMRef} from "@nextui-org/react-utils";
-import {AlertVariantProps} from "@nextui-org/theme/src/components/alert";
 import {ReactNode, useCallback, useMemo} from "react";
 import {mergeProps} from "@react-aria/utils";
 import {alert} from "@nextui-org/theme";
@@ -20,9 +19,9 @@ interface Props extends HTMLNextUIProps<"div"> {
    */
   title?: string;
   /**
-   * Main body of the alert message
+   * description of the alert message
    */
-  description: ReactNode;
+  description?: ReactNode;
   /**
    * Icon to be displayed in the alert - overrides the default icon
    */
@@ -125,7 +124,7 @@ export function useAlert(originalProps: UseAlertProps) {
   }, [setIsVisible, onClose]);
 
   const slots = useMemo(
-    () => alert({hasDescription: !isEmpty(description), ...variantProps}),
+    () => alert({hasContent: !isEmpty(description) || !isEmpty(children), ...variantProps}),
     [description, objectToDeps(variantProps)],
   );
 

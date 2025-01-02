@@ -1,5 +1,56 @@
 # @nextui-org/input-otp
 
+## 2.1.7
+
+### Patch Changes
+
+- [#4411](https://github.com/nextui-org/nextui/pull/4411) [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31) Thanks [@macci001](https://github.com/macci001)! - Fix virtual keyboard to display the keys based on allowedKeys(#4408)
+
+- [#4417](https://github.com/nextui-org/nextui/pull/4417) [`93c9df1`](https://github.com/nextui-org/nextui/commit/93c9df15d99cb7467927700f73b3a683f98f0ccf) Thanks [@Peterl561](https://github.com/Peterl561)! - fixed isRequired not showing error when validationBehavior=native is not explicitly set
+
+- [#4338](https://github.com/nextui-org/nextui/pull/4338) [`2f55ecb`](https://github.com/nextui-org/nextui/commit/2f55ecb4b2e61fb9d9a91df9f4d7c1eff6b7b05e) Thanks [@macci001](https://github.com/macci001)! - Change ensures that the input value does not accept any disallowed characters when the value prop contains them (#4329)
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/form@2.1.7
+  - @nextui-org/react-utils@2.1.2
+
+## 2.1.6
+
+### Patch Changes
+
+- [#4314](https://github.com/nextui-org/nextui/pull/4314) [`5598806`](https://github.com/nextui-org/nextui/commit/5598806216166dc9fff36cafd9112412486b747f) Thanks [@jrgarciadev](https://github.com/jrgarciadev)! - Fix build
+
+- Updated dependencies []:
+  - @nextui-org/form@2.1.6
+
+## 2.1.5
+
+### Patch Changes
+
+- [#4296](https://github.com/nextui-org/nextui/pull/4296) [`1485eca`](https://github.com/nextui-org/nextui/commit/1485eca48fce8a0acc42fe40590b828c1a90ff48) Thanks [@macci001](https://github.com/macci001)! - Fixing the autofocus functionality in input-otp component(#4250)
+
+- Updated dependencies []:
+  - @nextui-org/form@2.1.5
+
+## 2.1.4
+
+### Patch Changes
+
+- [#4258](https://github.com/nextui-org/nextui/pull/4258) [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3) Thanks [@wingkwong](https://github.com/wingkwong)! - sync with upstream RA versions
+
+- Updated dependencies [[`b16291b`](https://github.com/nextui-org/nextui/commit/b16291b2200229f0d0a9ea910e38f3f100f7931f), [`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/form@2.1.4
+
+## 2.1.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
+- Updated dependencies [[`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050)]:
+  - @nextui-org/form@2.1.3
+
 ## 2.1.2
 
 ### Patch Changes

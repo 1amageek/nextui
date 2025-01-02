@@ -83,6 +83,7 @@ export default async function DocPage({params}: DocPageProps) {
   if (!doc) {
     notFound();
   }
+
   const editUrl = `${GITHUB_URL}/${REPO_NAME}/edit/${TAG}${CONTENT_PATH}${currentRoute?.path}`;
 
   return (
@@ -99,7 +100,7 @@ export default async function DocPage({params}: DocPageProps) {
         </footer>
       </div>
       {headings && headings.length > 0 && (
-        <div className="hidden z-10 xl:flex xl:col-span-2 mt-8 pl-4">
+        <div className="hidden z-10 xl:flex xl:col-span-2 mt-8 pl-0">
           <DocsToc headings={headings} />
         </div>
       )}

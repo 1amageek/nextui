@@ -1,5 +1,42 @@
 # @nextui-org/drawer
 
+## 2.2.6
+
+### Patch Changes
+
+- [#4310](https://github.com/nextui-org/nextui/pull/4310) [`f8f6bfe`](https://github.com/nextui-org/nextui/commit/f8f6bfea5a7f783636c4d0ce9ba7291ce0ea0a97) Thanks [@omarshehab221](https://github.com/omarshehab221)! - Export useDisclosure and Drawer children props from `@nextui-org/drawer`
+
+- Updated dependencies [[`77206bc`](https://github.com/nextui-org/nextui/commit/77206bc62596894d038b9715e40b361fec286c10), [`5f388fc`](https://github.com/nextui-org/nextui/commit/5f388fc68c7db7f852432e73386686d919d44d31)]:
+  - @nextui-org/shared-utils@2.1.2
+  - @nextui-org/modal@2.2.6
+  - @nextui-org/framer-utils@2.1.5
+  - @nextui-org/react-utils@2.1.2
+
+## 2.2.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nextui-org/modal@2.2.5
+
+## 2.2.4
+
+### Patch Changes
+
+- Updated dependencies [[`1031e98`](https://github.com/nextui-org/nextui/commit/1031e985b71e69b8a7189ea049b9616257f820b3)]:
+  - @nextui-org/modal@2.2.4
+  - @nextui-org/framer-utils@2.1.4
+
+## 2.2.3
+
+### Patch Changes
+
+- [#4255](https://github.com/nextui-org/nextui/pull/4255) [`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed incorrect peerDependencies for theme and system package (#4254)
+
+- Updated dependencies [[`6a94a12`](https://github.com/nextui-org/nextui/commit/6a94a125d4836b0a18d9cd2cb521c85a6bfa9050)]:
+  - @nextui-org/modal@2.2.3
+  - @nextui-org/framer-utils@2.1.3
+
 ## 2.2.2
 
 ### Patch Changes
