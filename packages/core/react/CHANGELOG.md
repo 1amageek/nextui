@@ -1,5 +1,13 @@
 # @heroui/react
 
+## 2.7.3
+
+### Patch Changes
+
+- Updated dependencies [[`9091f51`](https://github.com/heroui-inc/heroui/commit/9091f513030456b46db03b69a57fd32a33c794b7)]:
+  - @heroui/calendar@2.2.14
+  - @heroui/date-picker@2.3.14
+
 ## 2.7.2
 
 ### Patch Changes
