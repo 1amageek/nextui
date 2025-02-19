@@ -1,5 +1,25 @@
 # @heroui/calendar
 
+## 2.2.14
+
+### Patch Changes
+
+- [`9091f51`](https://github.com/heroui-inc/heroui/commit/9091f513030456b46db03b69a57fd32a33c794b7) Thanks [@1amageek](https://github.com/1amageek)! - ### Changes
+
+  - Added support for customizing calendar cells.
+    - You can now use `children` to customize the content of calendar cells.
+    - The default structure of calendar cells has been updated to improve flexibility.
+
+  ```jsx
+  <Calendar>
+    {(date) => (
+      <div style={{backgroundColor: "lightblue"}}>
+        <span>{date.day}</span>
+      </div>
+    )}
+  </Calendar>
+  ```
+
 ## 2.2.13
 
 ### Patch Changes
